@@ -1,0 +1,39 @@
+:root {
+	--animation-time: 2s; 
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  padding: 0;
+  background-color: #222;
+  justify-content: center;
+  align-items: center;
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  animation: myfirst 5s linear 2s infinite alternate;
+ }
+
+
+@keyframes myfirst {
+  0%   {background-color:red;   border-radius: 50%; opacity: 0;
+left:0px; top:0px;}
+  25%  {background-color:yellow;   border-radius: 50%;
+ left:200px; top:0px;}
+  50%  {background-color:blue;   border-radius: 50%;
+left:200px; top:200px;}
+  75%  {background-color:green;    border-radius: 50%;
+left:0px; top:200px;}
+  100% {background-color:red;   border-radius: 50%; opacity: 1;
+ left:0px; top:0px;}
+}
+#red {
+  animation: myfirst var(--animation-time) ease alternate infinite;
+   }
